@@ -3,7 +3,7 @@
 You can tell the IDE to use eslint and prettier:
 
 - right click on `.eslintrc.json` -> `Apply ESLint Code Style Styles`
-- right click on `.prettierrc` -> `Apply ESLint Code Style Styles`
+- right click on `.prettierrc` -> `Apply Prettier Code Style Styles`
 
 In order to use it as default formatter on `ctrl + alt + l`:
 
