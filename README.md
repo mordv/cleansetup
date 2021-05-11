@@ -21,7 +21,7 @@ doubt) – your babel will transpile it anyway.
 
 `"react/jsx-curly-brace-presence": ["warn", { "props": "always", "children": "never" }]`
 
-Template string won't work as an attr without braces. Personally, I don't see what's useful about ability to remove
+Template string won't work as an attr without braces. Personally, I don't see what's useful about the ability to remove
 braces for strings attrs only. It must be an option either for all types or none.   
 
 
