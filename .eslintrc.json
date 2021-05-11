@@ -27,7 +27,18 @@
     "react/no-array-index-key": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-empty-function": "off"
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/quotes": [
+      "warn",
+      "backtick"
+    ],
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {
+        "props": "always",
+        "children": "never"
+      }
+    ]
   },
   "settings": {
     "react": {
