@@ -1,5 +1,5 @@
 export const theme = {
   colors: {
-    white: `#ffffff`,
+    text: `#ffffff`,
   },
 };

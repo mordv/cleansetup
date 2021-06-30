@@ -8,6 +8,6 @@ interface TestComponentProps {
 export const TestComponent: React.FC<TestComponentProps> = ({ name }) => <Text>{name}</Text>;
 
 const Text = styled.div`
-  color: blanchedalmond;
+  color: ${({ theme: { colors } }) => colors.text};
   font-size: 20px;
 `;
