@@ -1,13 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Text } from '@chakra-ui/react';
 
 interface TestComponentProps {
   name: string;
 }
 
-export const TestComponent: React.FC<TestComponentProps> = ({ name }) => <Text>{name}</Text>;
-
-const Text = styled.div`
-  color: ${({ theme: { colors } }) => colors.text};
-  font-size: 20px;
-`;
+export const TestComponent: React.FC<TestComponentProps> = ({ name }) => <Text userSelect={`none`}>{name}</Text>;

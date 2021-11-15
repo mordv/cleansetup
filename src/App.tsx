@@ -1,24 +1,15 @@
 import React from 'react';
 import { theme } from './styles/theme';
-import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './styles/global';
 import { AppRoutes } from './routes/AppRoutes';
+import { Center, ChakraProvider } from '@chakra-ui/react';
+import { Global } from '@emotion/react';
+import { globalStyles } from './styles/global';
 
-const App: React.FC = () => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyles />
-    <AppContainer>
+export const App: React.FC = () => (
+  <ChakraProvider theme={theme}>
+    <Global styles={globalStyles} />
+    <Center w={`full`} h={`full`}>
       <AppRoutes />
-    </AppContainer>
-  </ThemeProvider>
+    </Center>
+  </ChakraProvider>
 );
-
-const AppContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-`;
-
-export default App;

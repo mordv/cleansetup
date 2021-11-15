@@ -9,14 +9,13 @@ export interface AppState extends State {
   dec(): void;
 }
 
-const loggerMiddleware = (stateCreator: StateCreator<AppState>) => (
-  set: SetState<AppState>,
-  ...rest: [GetState<AppState>, StoreApi<AppState>]
-) =>
-  stateCreator((state) => {
-    console.log(`update state: `, typeof state === `function` ? `function update` : state);
-    set(state);
-  }, ...rest);
+const loggerMiddleware =
+  (stateCreator: StateCreator<AppState>) =>
+  (set: SetState<AppState>, ...rest: [GetState<AppState>, StoreApi<AppState>]) =>
+    stateCreator((state) => {
+      console.log(`update state: `, typeof state === `function` ? `function update` : state);
+      set(state);
+    }, ...rest);
 
 export const useAppStore = create<AppState>(
   loggerMiddleware(

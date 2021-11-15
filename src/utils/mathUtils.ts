@@ -13,8 +13,10 @@ export const avg = (numbers: number[]): number => {
 
 export const intRange = (length: number): number[] => Array.from({ length }).map((_, idx) => idx);
 
-export const randomFilter = <T extends unknown>(probability: number): ((val: T) => boolean) => () =>
-  Math.random() < probability / 100;
+export const randomFilter =
+  <T>(probability: number): ((val: T) => boolean) =>
+  () =>
+    Math.random() < probability / 100;
 
 const getRandomInt = (min: number, max: number): number => {
   min = Math.ceil(min);
